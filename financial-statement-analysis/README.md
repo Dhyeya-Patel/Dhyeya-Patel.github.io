@@ -1,4 +1,4 @@
-# Financial Statement Analysis (Sample)
+# Financial Statement Analysis
 
 An Excel workbook that calculates common financial ratios from a two-year income statement and balance sheet, and shows how each ratio changed.
 
