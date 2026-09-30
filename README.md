@@ -28,4 +28,6 @@ Microsoft Excel (formulas: `SUM`, `ROUND`, `IF`, `ABS`, `COUNTIF`, cross-sheet r
 
 ## What I learned
 
-_Write 2 to 3 sentences in your own words here, for example what a reconciliation catches, why you reconcile before closing a period, and how you would fix the variance._
+- Payroll register totals should match what is posted in the books.
+- Here, wages were $1,250 lower in the books because one bonus was never posted. The other lines matched.
+- The fix is an adjusting journal entry, and it's best to check this before closing the period.
