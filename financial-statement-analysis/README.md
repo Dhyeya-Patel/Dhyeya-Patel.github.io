@@ -31,4 +31,6 @@ Microsoft Excel (formulas, cross-sheet references, number formatting).
 
 ## What I learned
 
-_Write 2 to 3 sentences in your own words here, for example which ratio tells you the most about profitability versus risk, and what you would look at next._
+- Sales grew 15% and profit margin went up from 8.3% to 9.8%.
+- The company owes less compared to what it owns (debt-to-equity went from 0.83 to 0.71).
+- The income statement and balance sheet are connected, and the balance check should always be zero.
