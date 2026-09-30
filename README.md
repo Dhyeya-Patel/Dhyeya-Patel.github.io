@@ -1,4 +1,4 @@
-# Payroll Reconciliation (Sample)
+# Payroll Reconciliation
 
 An Excel workbook that compares one pay period's **payroll register** to what was posted in the **general ledger (GL)** and flags differences to investigate.
 
