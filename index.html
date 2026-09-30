@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhyeya | Accounting Portfolio</title>
+<meta name="description" content="Portfolio of Dhyeya, accounting student at Rutgers Business School and full-time accountant working toward CPA licensure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #eef3ee;
+    --grid: #cfdccf;
+    --ink: #14243a;
+    --muted: #4f6076;
+    --rule: #14243a;
+    --red: #b3261e;
+    --card: #f8fbf8;
+    --focus: #0b57d0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #101a17;
+      --grid: #1e2d28;
+      --ink: #e6efe9;
+      --muted: #9db0a7;
+      --rule: #e6efe9;
+      --red: #ff8a80;
+      --card: #16231f;
+      --focus: #8ab4f8;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--paper);
+    /* faint ledger-paper grid */
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header.top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 1.5rem 0; gap: 1rem; flex-wrap: wrap;
+  }
+  .brand { font-weight: 700; font-size: 1.1rem; text-decoration: none; }
+  nav a {
+    margin-left: 1.25rem; text-decoration: none; font-weight: 500; color: var(--muted);
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* Hero: the statement written as a ledger row that totals with a double underline */
+  .hero { padding: 4.5rem 0 3.5rem; }
+  .hero h1 {
+    font-size: clamp(2rem, 5.2vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0 0 1.75rem;
+    max-width: 22ch;
+  }
+  .total-rule {
+    width: 100%; max-width: 420px; height: 7px;
+    border-top: 1.5px solid var(--rule);
+    border-bottom: 1.5px solid var(--rule);
+    margin-bottom: 1.5rem;
+  }
+  .hero .meta { color: var(--muted); margin: 0; font-size: 1rem; }
+
+  section { padding: 3rem 0; }
+  h2 {
+    font-size: 1.6rem; margin: 0 0 1.5rem; letter-spacing: -0.01em;
+    padding-bottom: .5rem; border-bottom: 1.5px solid var(--rule);
+  }
+
+  /* Skills as ledger lines */
+  .skills { list-style: none; margin: 0; padding: 0; }
+  .skills li {
+    display: flex; justify-content: space-between; gap: 1rem;
+    padding: .7rem 0; border-bottom: 1px dashed var(--muted);
+  }
+  .skills .name { font-weight: 600; }
+  .skills .note { color: var(--muted); text-align: right; }
+
+  .projects { display: grid; gap: 1.25rem; }
+  .project {
+    background: var(--card);
+    border: 1.5px solid var(--rule);
+    padding: 1.4rem 1.5rem;
+  }
+  .project h3 { margin: 0 0 .5rem; font-size: 1.2rem; }
+  .project p { margin: 0 0 1rem; }
+  .links { display: flex; gap: 1rem; flex-wrap: wrap; font-weight: 600; }
+  .links a { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+  .links a:hover { color: var(--red); }
+
+  footer { padding: 2.5rem 0 3.5rem; color: var(--muted); border-top: 1.5px solid var(--rule); margin-top: 2rem; }
+  footer a { font-weight: 600; color: var(--ink); }
+
+  @media (max-width: 560px) {
+    nav a { margin-left: .9rem; }
+    .skills li { flex-direction: column; gap: 0; }
+    .skills .note { text-align: left; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#top">Dhyeya</a>
+      <nav aria-label="Sections">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- 1. PERSONAL STATEMENT -->
+      <div class="hero">
+        <h1>Accounting student and full-time accountant, building toward CPA licensure and a career in tax and financial advisory.</h1>
+        <div class="total-rule" aria-hidden="true"></div>
+        <p class="meta">Rutgers Business School, BS in Accounting, class of 2028 &middot; Edison, New Jersey</p>
+      </div>
+
+      <!-- 2. SKILLS -->
+      <section id="skills" aria-labelledby="skills-h">
+        <h2 id="skills-h">Skills</h2>
+        <ul class="skills">
+          <!-- EDIT: keep only the skills you can back up in an interview -->
+          <li><span class="name">Payroll processing</span><span class="note">Day-to-day, in a full-time role</span></li>
+          <li><span class="name">Company financial records</span><span class="note">Bookkeeping and month-end support</span></li>
+          <li><span class="name">Financial accounting (GAAP)</span><span class="note">Rutgers coursework</span></li>
+          <li><span class="name">Microsoft Excel</span><span class="note">Reconciliations and reporting</span></li>
+          <li><span class="name">Notary public</span><span class="note">Commissioned</span></li>
+          <li><span class="name">Languages</span><span class="note">English, Hindi</span></li>
+        </ul>
+      </section>
+
+      <!-- 3. PROJECTS -->
+      <section id="projects" aria-labelledby="projects-h">
+        <h2 id="projects-h">Projects</h2>
+        <div class="projects">
+
+          <!-- EDIT: replace each description with what you actually built, and swap in real links -->
+          <article class="project">
+            <h3>Payroll reconciliation workbook</h3>
+            <p>An Excel workbook that compares payroll register totals against the general ledger and flags differences for review. Built from a process I run at work, with all company data removed.</p>
+            <div class="links">
+              <a href="https://github.com/Dhyeya-Patel/payroll-reconciliation">Code on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Financial statement analysis</h3>
+            <p>A ratio and trend analysis of a public company's income statement, balance sheet, and cash flow statement, with a short written summary of what the numbers show. Completed for a Rutgers accounting course.</p>
+            <div class="links">
+              <a href="https://github.com/Dhyeya-Patel/financial-statement-analysis">Code on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>This portfolio website</h3>
+            <p>A single-page site written in plain HTML and CSS and published with GitHub Pages. It works as my online business card for employers, recruiters, and peers.</p>
+            <div class="links">
+              <a href="https://github.com/Dhyeya-Patel/Dhyeya-Patel.github.io">Code on GitHub</a>
+              <a href="https://Dhyeya-Patel.github.io">Live site</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <!-- EDIT: add your real email and LinkedIn -->
+      Contact: <a href="mailto:you@example.com">you@example.com</a>
+      &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a>
+    </footer>
+  </div>
+</body>
+</html>
